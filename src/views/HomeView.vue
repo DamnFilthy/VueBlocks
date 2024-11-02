@@ -12,6 +12,7 @@ const onAddElement = () =>
 
 <template>
   <main>
+    <h1>Deplyed to test</h1>
     <button @click="isOpen = !isOpen">Toggle</button>
     <br />
     <br />
