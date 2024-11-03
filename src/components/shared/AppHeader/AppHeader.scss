@@ -8,6 +8,20 @@
     padding: 10px;
   }
 
+  &__logo-block {
+    display: flex;
+    align-items: center;
+
+    .app-burger {
+      display: none;
+
+      @media (max-width: 900px) {
+        display: block;
+        margin-right: 20px;
+      }
+    }
+  }
+
   .header-logo {
     display: flex;
     align-items: center;

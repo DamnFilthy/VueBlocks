@@ -56,6 +56,19 @@ a {
     padding: 10px;
     min-height: calc(100vh - var(--mobile-header-and-footer-height));
   }
+
+  &--with-sidebar {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.page-with-sidebar {
+  padding-left: 350px;
+
+  @media (max-width: 900px) {
+    padding-left: 0;
+  }
 }
 
 button {

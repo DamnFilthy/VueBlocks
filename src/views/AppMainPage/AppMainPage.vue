@@ -6,19 +6,46 @@ import AppIcon from '@/components/icons/AppIcon.vue';
   <main class="app-main-page">
     <div class="main-presentation">
       <div class="main-presentation-external-circle square">
-        <div class="levitate-big-circle levitate-big-circle--orange levitate-big-circle--01"></div>
-        <div class="levitate-big-circle levitate-big-circle--yellow levitate-big-circle--02"></div>
-        <div class="levitate-big-circle levitate-big-circle--blue levitate-big-circle--03"></div>
-        <div class="levitate-big-circle levitate-big-circle--red levitate-big-circle--04"></div>
-        <div class="levitate-big-circle levitate-big-circle--green levitate-big-circle--05"></div>
+        <div
+          class="levitate-big-circle levitate-big-circle--orange levitate-big-circle--01 parallax"
+          data-value="1"
+        ></div>
+        <div
+          class="levitate-big-circle levitate-big-circle--yellow levitate-big-circle--02 parallax"
+          data-value="4"
+        ></div>
+        <div
+          class="levitate-big-circle levitate-big-circle--blue levitate-big-circle--03 parallax"
+          data-value="3"
+        ></div>
+        <div
+          class="levitate-big-circle levitate-big-circle--red levitate-big-circle--04 parallax"
+          data-value="5"
+        ></div>
+        <div
+          class="levitate-big-circle levitate-big-circle--green levitate-big-circle--05 parallax"
+          data-value="2"
+        ></div>
       </div>
 
       <div class="main-presentation-interior-circle square">
-        <div class="levitate-circle levitate-circle--green levitate-circle--01"></div>
-        <div class="levitate-circle levitate-circle--red levitate-circle--02"></div>
-        <div class="levitate-circle levitate-circle--orange levitate-circle--03"></div>
-        <div class="levitate-circle levitate-circle--blue levitate-circle--04"></div>
-        <img class="header-logo__icon" src="@/assets/header-logo.png" />
+        <div
+          class="levitate-circle levitate-circle--green levitate-circle--01 parallax"
+          data-value="2"
+        ></div>
+        <div
+          class="levitate-circle levitate-circle--red levitate-circle--02 parallax"
+          data-value="7"
+        ></div>
+        <div
+          class="levitate-circle levitate-circle--orange levitate-circle--03 parallax"
+          data-value="3"
+        ></div>
+        <div
+          class="levitate-circle levitate-circle--blue levitate-circle--04 parallax"
+          data-value="4"
+        ></div>
+        <img class="header-logo__icon parallax" data-value="1" src="@/assets/header-logo.png" />
       </div>
     </div>
 

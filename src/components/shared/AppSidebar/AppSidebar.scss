@@ -1,0 +1,20 @@
+.app-sidebar {
+  transition: 0.3s ease;
+  background-color: var(--white);
+  padding: 20px 10px;
+  position: fixed;
+  width: 320px;
+  min-height: 300px;
+  max-height: 800px;
+  overflow-y: auto;
+  border: 1px solid rgb(225, 222, 222);
+  border-radius: 14px;
+
+  @media (max-width: 900px) {
+    left: -3000px;
+  }
+
+  &--open {
+    left: 0;
+  }
+}

@@ -11,11 +11,11 @@ const router = createRouter({
     {
       path: '/demos',
       name: 'demos',
-      component: () => import('../views/DemosListView.vue')
+      component: () => import('../views/AppDemoList/AppDemoList.vue')
     },
     {
       path: '/demos/collapse',
-      name: 'toggler',
+      name: 'collapse',
       component: () => import('../views/demos/CollapseDemo.vue')
     }
   ]

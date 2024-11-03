@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import AppCollapse from '@/components/AppCollapse.vue';
+import AppCollapse from '@/components/library/AppCollapse/AppCollapse.vue';
 
 const isOpen = ref(false);
 
@@ -11,7 +11,8 @@ const onAddElement = () =>
 </script>
 
 <template>
-  <main>
+  <main class="page-with-sidebar">
+    <router-link :to="{ name: 'demos' }">Назад</router-link>
     <h1>Deplyed to test</h1>
     <button @click="isOpen = !isOpen">Toggle</button>
     <br />
