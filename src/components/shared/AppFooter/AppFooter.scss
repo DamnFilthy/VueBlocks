@@ -1,0 +1,29 @@
+.app-footer {
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-dark);
+  color: var(--white);
+
+  .app-footer-social {
+    a {
+      font-size: 24px;
+      font-family: var(--caveat-font);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 10px;
+      }
+
+      svg {
+        fill: var(--white);
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
