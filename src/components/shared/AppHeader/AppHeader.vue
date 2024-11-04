@@ -3,6 +3,8 @@ import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useSettingsStore } from '@/stores/settings';
 
+import AppMenuBurger from '@/components/shared/AppMenuBurger/AppMenuBurger.vue';
+
 const settingsStore = useSettingsStore();
 
 const route = useRoute();
@@ -23,7 +25,12 @@ watch(
 <template>
   <div class="app-header">
     <div class="app-header__logo-block">
-      <div v-if="showBurger" class="app-burger" @click="settingsStore.toggleSidebar">b</div>
+      <app-menu-burger
+        v-if="showBurger"
+        :is-open="settingsStore.isSidebarOpen"
+        class="app-burger"
+        @click="settingsStore.toggleSidebar"
+      />
 
       <router-link to="/" class="header-logo">
         <img class="header-logo__icon" src="@/assets/header-logo.png" />

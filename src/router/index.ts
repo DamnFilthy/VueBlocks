@@ -16,7 +16,7 @@ const router = createRouter({
     {
       path: '/demos/collapse',
       name: 'collapse',
-      component: () => import('../views/demos/CollapseDemo.vue')
+      component: () => import('../views/demos/AppCollapseDemo/AppCollapseDemo.vue')
     }
   ]
 });

@@ -1,0 +1,64 @@
+.app-menu-burger {
+  position: relative;
+  width: 3rem;
+  height: 2.6rem;
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;
+
+    &:checked ~ .hamburger-lines .line__first {
+      transform: rotate(45deg);
+    }
+
+    &:checked ~ .hamburger-lines .line__second {
+      transform: scaleY(0);
+    }
+
+    &:checked ~ .hamburger-lines .line__last {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .hamburger-lines {
+    position: absolute;
+    top: 0.7rem;
+    left: 0;
+    z-index: 2;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.2rem;
+    height: 1.4rem;
+
+    .line {
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      background: var(--primary-dark);
+      border-radius: 2rem;
+
+      &__first {
+        transform-origin: 10% 0%;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &__second {
+        transition: transform 0.1s ease-in-out;
+      }
+
+      &__last {
+        transform-origin: 10% 100%;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+}

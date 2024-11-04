@@ -6,7 +6,10 @@ const settingsStore = useSettingsStore();
 
 <template>
   <div class="app-sidebar" :class="{ 'app-sidebar--open': settingsStore.isSidebarOpen }">
-    <router-link :to="{ name: 'collapse' }" @click="settingsStore.closeSidebar"
+    <router-link
+      :to="{ name: 'collapse' }"
+      @click="settingsStore.closeSidebar"
+      class="app-sidebar__link"
       >Collapse</router-link
     >
   </div>

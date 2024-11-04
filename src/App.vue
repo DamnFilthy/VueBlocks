@@ -6,8 +6,10 @@ import AppHeader from '@/components/shared/AppHeader/AppHeader.vue';
 import AppFooter from '@/components/shared/AppFooter/AppFooter.vue';
 import AppSidebar from '@/components/shared/AppSidebar/AppSidebar.vue';
 
-import useParallax from '@/composables/parallax';
+import { useSettingsStore } from '@/stores/settings';
+const settingsStore = useSettingsStore();
 
+import useParallax from '@/composables/parallax';
 const { moveParallaxImage } = useParallax();
 
 const route = useRoute();
@@ -28,16 +30,18 @@ watch(
 
 <template>
   <app-header />
+  <app-sidebar v-if="showSidebar" />
 
   <div
     class="app-page"
-    :class="{ 'app-page--with-sidebar': showSidebar }"
+    :class="[
+      { 'app-page--with-sidebar': showSidebar },
+      { 'app-page--menu-open': settingsStore.isSidebarOpen }
+    ]"
     @mouseenter="moveParallaxImage"
     @mousemove="moveParallaxImage"
     @mouseleave="moveParallaxImage"
   >
-    <app-sidebar v-if="showSidebar" />
-
     <RouterView />
   </div>
 
