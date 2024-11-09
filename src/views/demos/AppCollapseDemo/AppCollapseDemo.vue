@@ -5,7 +5,7 @@ import AppIcon from '@/components/icons/AppIcon.vue';
 import AppCollapse from '@/components/library/AppCollapse/AppCollapse.vue';
 
 const isOpen = ref(true);
-const isOpenDetails = ref(false);
+const isOpenDetails = ref(true);
 
 const items = ref(['First item', 'Second item', 'Third item', 'Four item', 'Five item']);
 
@@ -57,9 +57,9 @@ const codeExample = computed(() => {
       >
         <app-icon name="github" width="30" height="30" />
 
-        <span>Collapse Demo</span>
+        <span>Collapse Demo (github)</span>
 
-        <app-icon name="link" width="30" height="30" />
+        <app-icon name="link-external" width="30" height="30" />
       </a>
 
       <div class="demonstration__description">
@@ -70,6 +70,21 @@ const codeExample = computed(() => {
       <div class="demonstration__description">
         Основная фишка - динамическая высота высчитывающаяся на лету с помощью javascript
       </div>
+
+      <div class="divider"></div>
+
+      <a
+        href="https://t.me/vib_online/185"
+        target="_blank"
+        class="link-title"
+        style="margin-bottom: 30px"
+      >
+        <app-icon name="telegram" width="30" height="30" />
+
+        <span>Как это работает?</span>
+
+        <app-icon name="link-external" width="30" height="30" />
+      </a>
 
       <div class="demonstration__actions">
         <button @click="onAddElement" class="demonstration__btn">Добавить элемент +</button>
@@ -95,14 +110,17 @@ const codeExample = computed(() => {
         </app-collapse>
       </div>
 
+      <div class="divider"></div>
+
       <h2
         class="details-title"
         :class="{ 'details-title--open': isOpenDetails }"
         @click="isOpenDetails = !isOpenDetails"
       >
-        <span>Показать подробное объяснение</span>
+        <span>Подробное описание</span>
         <app-icon name="arrow-right" />
       </h2>
+
       <app-collapse :is-open="isOpenDetails">
         <pre v-highlight class="highlight">
           <code class="javascript">

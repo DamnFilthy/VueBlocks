@@ -135,3 +135,11 @@ button {
     max-width: 280px;
   }
 }
+
+.divider {
+  height: 2px;
+  width: 100%;
+  border-radius: 14px;
+  background-color: var(--primary-blue);
+  margin: 50px 0;
+}
